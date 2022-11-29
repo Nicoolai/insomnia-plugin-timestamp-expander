@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-timestamp-expander",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "main.js",
   "author": "Nicolai Søndergaard <https://github.com/Nicoolai>",
   "homepage": "https://github.com/Nicoolai/insomnia-plugin-timestamp-expander",
