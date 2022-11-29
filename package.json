@@ -15,7 +15,10 @@
       "name": "Nicolai Søndergaard",
       "icon": "https://avatars.githubusercontent.com/u/5327895"
     },
-
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Nicoolai/insomnia-plugin-timestamp-expander.git"
+    },
     "unlisted": true
   },
   "dependencies": [],
