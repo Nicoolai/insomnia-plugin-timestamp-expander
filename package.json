@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-timestamp-expander",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "main.js",
 
   "insomnia": {
