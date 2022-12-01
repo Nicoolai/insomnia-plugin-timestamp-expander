@@ -9,7 +9,7 @@ At the moment, it only really works on json output. 🤷
 
 ## What does it actually do!?
 
-When it spots a 10 or 13 char timestamp, it will parse it into a date object.  
+When it spots a 10 or 13 characters long integer, it will attempt to parse it into a date object.  
 It will then add an extra property, after the triggering property, where it writes the date as ISO String.  
 The new property name will be the name of the triggering property, with `_as_datetime` appended to it.  
 

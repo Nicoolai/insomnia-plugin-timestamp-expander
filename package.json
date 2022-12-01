@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-timestamp-expander",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "main.js",
   "author": "Nicolai Søndergaard <https://github.com/Nicoolai>",
   "homepage": "https://github.com/Nicoolai/insomnia-plugin-timestamp-expander",
@@ -11,7 +11,7 @@
   "insomnia": {
     "name": "timestamp-expander",
     "displayName": "timestamp-expander Plugin",
-    "description": "This plugin tried to detect timestamps and adds a property with the timestamp in ISO format.",
+    "description": "This plugin tries to detect timestamps and adds a property with the timestamp in ISO format.",
     "images": {
       "icon": "icon.png",
       "cover": "icon.png"
