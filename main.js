@@ -5,22 +5,21 @@ const bufferToJsonObj = buf => JSON.parse(buf.toString('utf-8'));
 const jsonObjToBuffer = obj => Buffer.from(JSON.stringify(obj), 'utf-8');
 const bufferToString = buf => buf.toString('utf-8');
 
-const timeStampregex = /(["']([a-z0-9_-]+?)["']:([0-9]{10}|[0-9]{13}))[,}\s]/gi;
+const timeStampregex = /((["']([a-z0-9_-]+?)["']):([0-9]{10}|[0-9]{13}))([,}\s])/gi;
 
 module.exports.responseHooks = [
     async ctx => {
         try {
             const body = bufferToString(ctx.response.getBody());
-            console.log(body);
-            const newBody = body.replace(timeStampregex, (match, $1, $2, $3) => {
+            const newBody = body.replace(timeStampregex, (match, $1, $2, $3, $4, $5) => {
                 let d;
-                if ($3.length == 10) {
-                    d = new Date($3 * 1000);
+                if ($4.length == 10) {
+                    d = new Date($4 * 1000);
                 }
-                else if ($3.length == 13) {
-                    d = new Date($3);
+                else if ($4.length == 13) {
+                    d = new Date($4);
                 }
-                return `${$1}, "${$2}_as_datetime":"${d.toISOString()}",`;
+                return `${$2}:${$4}, "${$3}_as_datetime":"${d.toISOString()}"${$5}`;
               });
 
               ctx.response.setBody(newBody);
